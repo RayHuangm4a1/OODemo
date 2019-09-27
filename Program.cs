@@ -16,11 +16,13 @@ namespace OODemo
     {
         public static void Main(string[] args)
         {
-            Console.WriteLine("Start OODemo");
+            Console.WriteLine("=====Start OODemo=====");
 
-            CodeBallComponent.CodeBall _CodeBall = new  CodeBallComponent.CodeBall("circle", 5);
+            CodeBall _CodeBall = new CodeBall("circle", 5);
             string _CodeBallStyle = _CodeBall.getStyle();
             Console.WriteLine(_CodeBallStyle);
+
+             Console.WriteLine("=====End OODemo=====");
         }
     }
 }
