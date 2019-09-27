@@ -18,11 +18,17 @@ namespace OODemo
         {
             Console.WriteLine("=====Start OODemo=====");
 
-            CodeBall _CodeBall = new CodeBall("circle", 5);
-            string _CodeBallStyle = _CodeBall.getStyle();
+            CodeBall _CodeBall = new CodeBall("circle", 3);
+            string _CodeBallStyle = _CodeBall.GetStyle();
+            Console.WriteLine(String.Format("{0}, {1}",_CodeBall.Name, _CodeBall.Size));
             Console.WriteLine(_CodeBallStyle);
 
-             Console.WriteLine("=====End OODemo=====");
+             CodeBall _CodeBallBig = new CodeBall("big circle", 10);
+            string _CodeBallBigStyle = _CodeBallBig.GetStyle();
+            Console.WriteLine(String.Format("{0}, {1}",_CodeBallBig.Name, _CodeBallBig.Size));
+            Console.WriteLine(_CodeBallBigStyle);
+
+            Console.WriteLine("=====End OODemo=====");
         }
     }
 }
