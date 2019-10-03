@@ -18,15 +18,15 @@ namespace OODemo
         {
             Console.WriteLine("=====Start OODemo=====");
 
-            CodeBall _CodeBall = new CodeBall("circle", 3);
-            string _CodeBallStyle = _CodeBall.GetStyle();
-            Console.WriteLine(String.Format("{0}, {1}",_CodeBall.Name, _CodeBall.Size));
-            Console.WriteLine(_CodeBallStyle);
+            CodeBallComponent.CodeBall _AnimalCodeBall = CodeBallUtils.CreateCodeBallInstance(CodeBallEnum.Animal);
+            CodeBallComponent.CodeBall _CircleCodeBall = CodeBallUtils.CreateCodeBallInstance(CodeBallEnum.Circle);
+            CodeBallComponent.CodeBall _RectangleCodeBall = CodeBallUtils.CreateCodeBallInstance(CodeBallEnum.Rectangle);
+            CodeBallComponent.CodeBall _RoundCodeBall = CodeBallUtils.CreateCodeBallInstance(CodeBallEnum.Round);
 
-             CodeBall _CodeBallBig = new CodeBall("big circle", 10);
-            string _CodeBallBigStyle = _CodeBallBig.GetStyle();
-            Console.WriteLine(String.Format("{0}, {1}",_CodeBallBig.Name, _CodeBallBig.Size));
-            Console.WriteLine(_CodeBallBigStyle);
+            Console.WriteLine(_AnimalCodeBall.GetStyle());
+            Console.WriteLine(_CircleCodeBall.GetStyle());
+            Console.WriteLine(_RectangleCodeBall.GetStyle());
+            Console.WriteLine(_RoundCodeBall.GetStyle());
 
             Console.WriteLine("=====End OODemo=====");
         }
