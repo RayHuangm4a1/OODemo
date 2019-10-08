@@ -7,7 +7,6 @@ namespace CodeBallComponent
 		#region constructor
 		public AnimalCodeBall()
 		{
-			this.m_Name = "Animal";
 		}
 		#endregion
 

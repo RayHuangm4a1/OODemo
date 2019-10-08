@@ -7,7 +7,6 @@ namespace CodeBallComponent
 		#region constructor
 		public RoundCodeBall()
 		{
-			this.m_Name = "Round";
 		}
 		#endregion
 

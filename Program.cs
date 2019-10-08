@@ -28,6 +28,12 @@ namespace OODemo
             Console.WriteLine(_RectangleCodeBall.GetStyle());
             Console.WriteLine(_RoundCodeBall.GetStyle());
 
+            _AnimalCodeBall.setIButtonClick(new ButtonClickToBoom());
+            _AnimalCodeBall.setIHover(new HoverToShowTooltips());
+            Console.WriteLine(string.Format("{0}, {1}",
+                _AnimalCodeBall.Click(),
+                _AnimalCodeBall.Hover()));
+
             Console.WriteLine("=====End OODemo=====");
         }
     }

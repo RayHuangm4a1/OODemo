@@ -17,7 +17,7 @@ namespace CodeBallComponent
 				case CodeBallEnum.Round:
 					return new RoundCodeBall();
 				default:
-					return new CodeBall();
+					return new CircleCodeBall();
 			}
 		}
 	}

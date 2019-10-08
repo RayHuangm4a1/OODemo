@@ -2,11 +2,13 @@ using System;
 
 namespace CodeBallComponent
 {
-	public class CodeBall
+	public abstract class CodeBall
 	{
 		#region protected member
-		protected string m_Name;
 		protected string m_Shape;
+		protected IButtonClick m_ButtonClick;
+		protected IHover m_Hover;
+
 		#endregion
 
 		#region constructor
@@ -18,13 +20,7 @@ namespace CodeBallComponent
 		#region property
 		public string Name
 		{
-			get {
-				return this.m_Name;
-			}
-
-			set {
-
-			}
+			get; set;
 		}
 		#endregion
 
@@ -35,6 +31,24 @@ namespace CodeBallComponent
 				Name,
 				getOtherStyle()
 			);
+		}
+		public void setIButtonClick(IButtonClick buttonClick)
+		{
+			this.m_ButtonClick = buttonClick;
+		}
+		public void setIHover(IHover hover)
+		{
+			this.m_Hover = hover;
+		}
+
+		public string Click()
+		{
+			return this.m_ButtonClick.Click();
+		}
+
+		public string Hover()
+		{
+			return this.m_Hover.Hover();
 		}
 		#endregion
 
