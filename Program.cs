@@ -24,15 +24,21 @@ namespace OODemo
             CodeBallComponent.CodeBall _RoundCodeBall = CodeBallUtils.CreateCodeBallInstance(CodeBallEnum.Round);
 
             Console.WriteLine(_AnimalCodeBall.GetStyle());
-            Console.WriteLine(_CircleCodeBall.GetStyle());
-            Console.WriteLine(_RectangleCodeBall.GetStyle());
-            Console.WriteLine(_RoundCodeBall.GetStyle());
-
             _AnimalCodeBall.setIButtonClick(new ButtonClickToBoom());
             _AnimalCodeBall.setIHover(new HoverToShowTooltips());
-            Console.WriteLine(string.Format("{0}, {1}",
-                _AnimalCodeBall.Click(),
-                _AnimalCodeBall.Hover()));
+            Console.WriteLine(string.Format("when click: {0}, when hover: {1}",
+            _AnimalCodeBall.Click(),
+            _AnimalCodeBall.Hover()));
+
+            Console.WriteLine(_CircleCodeBall.GetStyle());
+            _CircleCodeBall.setIButtonClick(new ButtonClickToClose());
+            _CircleCodeBall.setIHover(new HoverToZoomIn());
+            Console.WriteLine(string.Format("when click: {0}, when hover: {1}",
+            _CircleCodeBall.Click(),
+            _CircleCodeBall.Hover()));
+
+            Console.WriteLine(_RectangleCodeBall.GetStyle());
+            Console.WriteLine(_RoundCodeBall.GetStyle());
 
             Console.WriteLine("=====End OODemo=====");
         }
